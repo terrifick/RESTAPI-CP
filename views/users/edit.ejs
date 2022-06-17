@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+</head>
+
+<body>
+    <h1>Edit User</h1>
+    <form action="/users/<%=user._id%>?_method=PUT" method="POST">
+        <label for="name">User Name</label>
+        <input type="text" name="name" id="name" placeholder="product name" value="<%=user.name%>">
+        <label for="image">Image URL</label>
+        <input type="text" id="image" name="image" placeholder="Image URL" value="<%= user.imageUrl %>">
+        <label for="profession">Select Profession</label>
+        <select name="profession" id="profession">
+            <% for(let profession of professions){ %>
+            <option value="<%=profession%>" <%= user.profession === category ? 'selected': '' %>><%=profession%></option>
+            <% } %>
+        </select>
+        <button>Submit</button>
+    </form>
+
+    <a href="/users/<%=user._id%>">Cancel</a>
+
+</body>
+
+</html>

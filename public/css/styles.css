@@ -1,0 +1,22 @@
+body {
+  margin: 10%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-md-8 {
+  display: flex;
+}
+
+.user-image {
+  width: 80%;
+}
+
+.profile {
+  width: 80%;
+  margin: auto;
+}
